@@ -3,13 +3,15 @@ import random
 
 import streamlit as st
 from datetime import datetime
-from app.agents.travel_agent import build_travel_agent
-from app.agents.llm import call_llm, generate_travel_summary
 import json
 from typing import Dict
 
 import sys
 from pathlib import Path
+
+from src.llm import call_llm, generate_travel_summary
+from src.travel_agent import build_travel_agent
+
 sys.path.append(str(Path(__file__).parent))
 
 
