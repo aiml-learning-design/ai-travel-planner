@@ -32,3 +32,6 @@ python-dotenv
 # Development tools
 black
 ruff
+
+# LangChain ecosystem
+langgraph
