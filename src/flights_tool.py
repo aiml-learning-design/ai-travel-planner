@@ -6,7 +6,7 @@ from dataclasses import dataclass
 import logging
 from tenacity import retry, stop_after_attempt, wait_exponential
 
-from src.configuration import FLIGHT_API_KEY
+#from src.configuration import FLIGHT_API_KEY
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -37,7 +37,9 @@ class FlightAPIClient:
             api_host: API host (default: Agoda's RapidAPI host).
             base_endpoint: Base path for flight endpoints.
         """
-        self.api_key = FLIGHT_API_KEY
+        self.api_key = '54b3678a63mshe9d415607df25b9p17d896jsn5d5905243bd9'
+      #  self.api_key = FLIGHT_API_KEY
+
         if not self.api_key:
             raise ValueError("Flight API key not provided and FLIGHT_API_KEY env var not set")
 

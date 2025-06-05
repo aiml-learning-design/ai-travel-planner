@@ -6,7 +6,7 @@ from typing import List, Dict, Optional
 
 import json
 
-from src.configuration import GROQ_API_KEY, GROQ_ENDPOINT
+#from src.configuration import GROQ_API_KEY, GROQ_ENDPOINT
 
 MODEL = "llama3-70b-8192"
 
@@ -53,7 +53,8 @@ def call_llm(
     #
     global content
     headers = {
-        "Authorization": f"Bearer {GROQ_API_KEY}",
+      #  "Authorization": f"Bearer {GROQ_API_KEY}",
+        "Authorization": f"Bearer {'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'}",
         "Content-Type": "application/json",
         "Accept": "application/json"
     }
@@ -71,9 +72,11 @@ def call_llm(
     }
 
     try:
+        GROQ_ENDPOINT = "https://api.groq.com/openai/v1/chat/completions"
         response = requests.post(GROQ_ENDPOINT, headers=headers, json=data, timeout=100)
 
-        # Add debug logging
+        #response = requests.post(GROQ_ENDPOINT, headers=headers, json=data, timeout=100)
+    # Add debug logging
         # print(f"Request payload: {json.dumps(data, indent=2)}")
         # print(f"Status code: {response.status_code}")
         # print(f"Response: {response.text}")

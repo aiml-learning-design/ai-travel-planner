@@ -6,7 +6,7 @@ from dataclasses import dataclass
 import logging
 from tenacity import retry, stop_after_attempt, wait_exponential
 
-from src.configuration import HOTEL_API_KEY
+#from src.configuration import HOTEL_API_KEY
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -33,7 +33,10 @@ class HotelAPIClient:
         """
         Initialize the Hotel API client.
         """
+        HOTEL_API_KEY='54b3678a63mshe9d415607df25b9p17d896jsn5d5905243bd9'
         self.api_key = HOTEL_API_KEY or api_key
+
+        #self.api_key = HOTEL_API_KEY or api_key
         if not self.api_key:
             raise ValueError("Hotel API key not provided and HOTEL_API_KEY env var not set")
 
