@@ -2,10 +2,17 @@
 
 from langgraph.graph import StateGraph
 from typing import TypedDict, Optional, List
-from app.tools.weather_tool import get_weather
-from app.tools.places_tool import get_places
-from app.tools.flights_tool import FlightAPIClient, FlightSearchParams
-from app.tools.hotels_tool import HotelAPIClient, HotelSearchParams
+
+from app.agents.flights_tool import FlightAPIClient, FlightSearchParams
+from app.agents.hotels_tool import HotelAPIClient, HotelSearchParams
+from app.agents.places_tool import get_places
+from app.agents.weather_tool import get_weather
+
+
+# from app.tools.weather_tool import get_weather
+# from app.tools.places_tool import get_places
+# from app.tools.flights_tool import FlightAPIClient, FlightSearchParams
+# from app.tools.hotels_tool import HotelAPIClient, HotelSearchParams
 
 
 # 1. Define the shared TravelState
