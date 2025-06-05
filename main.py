@@ -178,14 +178,14 @@ if st.session_state.travel_data:
     col1, col2 = st.columns(2)
 
     with col1:
-        st.subheader("🌤️ Weather")
+        st.subheader("🌤️ Weather of your Destination")
         if 'weather' in st.session_state.travel_data:
             st.write(st.session_state.travel_data['weather'])
         else:
             st.warning("No weather data available")
 
     with col2:
-        st.subheader("🏛️ Places to Visit")
+        st.subheader("🏛️Best Places to Visit")
         if 'places' in st.session_state.travel_data:
             places = st.session_state.travel_data['places'].get('results', [])
             print("=================================places=================================")
@@ -208,20 +208,20 @@ if st.session_state.travel_data:
             print("=====================flight final Response===============================")
 
             st.write(f"**Airline:** {flight.get('itinerary_info', {}).get('ticketing_airline', 'N/A')}")
-            st.write(f"**Duration:** {flight.get('itinerary_info', {}).get('total_trip_duration', 'N/A')}")
+            st.write(f"**Duration:** {flight.get('itinerary_info', {}).get('total_trip_duration', 'N/A')} Minutes")
             #st.write(f"**Available Seats:** {flight.get('itinerary_info', {}).get('available_seats', 'N/A')}")
             available_seats = flight.get('itinerary_info', {}).get('available_seats', 'N/A')
             if isinstance(available_seats, int) and available_seats == 0:
                 available_seats = random.randint(1, 9)
 
             st.write(f"**Available Seats:** {available_seats}")
-            st.write(f"**Price Info:** {flight.get('itinerary_info', {}).get('price_breakdown', {}).get('basis').get('price', 'N/A')}")
+            st.write(f"**Price Info:** {flight.get('itinerary_info', {}).get('price_breakdown', {}).get('basis').get('price', 'N/A')} €")
 
         else:
             st.warning("No flight data available")
 
     with col4:
-        st.subheader("🏨 Hotels")
+        st.subheader("🏨 Hotels Availability")
         if 'hotels' in st.session_state.travel_data:
             hotel = st.session_state.travel_data['hotels']
             st.write(f"**City:** {hotel.get('city', 'N/A')}")
