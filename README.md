@@ -279,3 +279,5 @@ ai-travel-bot/
 │   └── helpers.py               # General helper functions
 └── README.md                    # Project Overview
 ```
+
+######  pip freeze > requirements.txt
