@@ -8,6 +8,11 @@ from app.agents.llm import call_llm, generate_travel_summary
 import json
 from typing import Dict
 
+import sys
+from pathlib import Path
+sys.path.append(str(Path(__file__).parent))
+
+
 # Set page config
 st.set_page_config(
     page_title="AI Travel Planner",
