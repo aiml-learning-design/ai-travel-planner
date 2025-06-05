@@ -215,7 +215,7 @@ if st.session_state.travel_data:
                 available_seats = random.randint(1, 9)
 
             st.write(f"**Available Seats:** {available_seats}")
-            st.write(f"**Price Info:** {flight.get('itinerary_info', {}).get('price_breakdown', {}).get('basis').get('price', 'N/A')} €")
+            st.write(f"**Price Info:** {flight.get('itinerary_info', {}).get('price_breakdown', {}).get('basis').get('price', 'N/A')} $")
 
         else:
             st.warning("No flight data available")
