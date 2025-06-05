@@ -3,10 +3,10 @@
 from langgraph.graph import StateGraph
 from typing import TypedDict, Optional, List
 
-from app.agents.flights_tool import FlightAPIClient, FlightSearchParams
-from app.agents.hotels_tool import HotelAPIClient, HotelSearchParams
-from app.agents.places_tool import get_places
-from app.agents.weather_tool import get_weather
+from .flights_tool import FlightAPIClient, FlightSearchParams
+from .hotels_tool import HotelAPIClient, HotelSearchParams
+from .places_tool import get_places
+from .weather_tool import get_weather
 
 
 # from app.tools.weather_tool import get_weather
