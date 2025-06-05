@@ -150,8 +150,8 @@ if prompt := st.chat_input("Ask about your travel plans..."):
                 st.session_state.messages.append({"role": "assistant", "content": assistant_response})
 
                 # Display assistant response
-                with st.chat_message("assistant"):
-                    st.markdown(assistant_response)
+                # with st.chat_message("assistant"):
+                #     st.markdown(assistant_response)
 
         except Exception as e:
             error_msg = f"Sorry, I couldn't plan your trip. Error: {str(e)}"
@@ -237,3 +237,12 @@ if st.session_state.travel_data:
                 st.info("No detailed hotel info found.")
         else:
             st.warning("No hotel data available")
+
+
+    st.markdown("---")  # Add a horizontal line for separation
+    st.subheader("📝 Travel Summary")
+    if 'travel_results' in locals() and travel_results and 'summary' in travel_results:
+        with st.chat_message("assistant"):
+            st.markdown(travel_results['summary'])
+    else:
+        st.warning("No summary available")
