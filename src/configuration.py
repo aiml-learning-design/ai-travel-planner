@@ -12,7 +12,6 @@ load_dotenv()
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 GROQ_BASE_URL = "https://api.groq.com/openai/v1"  # Default Groq endpoint
 GROQ_ENDPOINT = "https://api.groq.com/openai/v1/chat/completions"
-
 LLAMA3_MODEL = "llama3-8b-8192"  # You can switch to another if needed
 
 # ---------------------------

@@ -1,4 +1,4 @@
-from app.agents.travel_agent import build_travel_agent
+from src.travel_agent import build_travel_agent
 
 # Step 1: Build the travel agent graph
 travel_agent = build_travel_agent()

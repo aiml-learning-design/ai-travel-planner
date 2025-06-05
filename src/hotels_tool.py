@@ -6,7 +6,7 @@ from dataclasses import dataclass
 import logging
 from tenacity import retry, stop_after_attempt, wait_exponential
 
-from app.core.configuration import HOTEL_API_KEY
+from src.configuration import HOTEL_API_KEY
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)

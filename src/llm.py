@@ -6,7 +6,7 @@ from typing import List, Dict, Optional
 
 import json
 
-from app.core.configuration import GROQ_API_KEY, GROQ_ENDPOINT
+from src.configuration import GROQ_API_KEY, GROQ_ENDPOINT
 
 MODEL = "llama3-70b-8192"
 
@@ -50,6 +50,7 @@ def call_llm(
     Returns:
         Generated response from LLM
     """
+    #
     global content
     headers = {
         "Authorization": f"Bearer {GROQ_API_KEY}",
