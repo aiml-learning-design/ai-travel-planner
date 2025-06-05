@@ -3,7 +3,8 @@ from setuptools import setup, find_packages
 setup(
     name="ai-travel-planner",
     version="0.1",
-    packages=find_packages(),
+    packages=find_packages(where="."),
+    package_dir={"": "."},
     install_requires=[
         # Core Streamlit and dependencies
         "streamlit>=1.45.0",
