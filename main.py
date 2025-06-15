@@ -254,6 +254,7 @@ if st.session_state.travel_data:
     else:
         st.warning("No summary available")
 
+
 st.markdown(
     """
     <style>
@@ -263,11 +264,12 @@ st.markdown(
         bottom: 0;
         width: 100%;
         text-align: center;
-        padding: 5px;
-        font-size: 0.8em;
-        color: #6c757d;  /* Gray for subtlety */
-        background-color: rgba(255, 255, 255, 0.5);  /* Semi-transparent white */
-        border-top: 1px solid #e9ecef;  /* Thin border */
+        padding: 10px;
+        font-size: 14px;
+        color: #555;
+        background-color: rgba(255,255,255,0.9);
+        z-index: 1000;
+        border-top: 1px solid #eee;
     }
     </style>
     <div class="footer">
