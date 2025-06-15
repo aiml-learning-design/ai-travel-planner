@@ -54,7 +54,7 @@ def call_llm(
     global content
     headers = {
       #  "Authorization": f"Bearer {GROQ_API_KEY}",
-        "Authorization": f"Bearer {'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'}",
+        "Authorization": f"Bearer {'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'}",
         "Content-Type": "application/json",
         "Accept": "application/json"
     }
